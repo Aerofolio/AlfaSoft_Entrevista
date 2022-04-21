@@ -90,7 +90,7 @@ namespace AlfaSoft_Entrevista
         protected static void CreateFileWithResults(List<HttpResponseMessage> httpResponses)
         {
             var enviroment = Environment.CurrentDirectory;
-            string directory = Directory.GetParent(enviroment).Parent.FullName + LogFileName;
+            string directory = enviroment + LogFileName;
             var infoString = HttpResponsesToString(httpResponses);
 
             try
@@ -115,7 +115,7 @@ namespace AlfaSoft_Entrevista
             {
                 result += httpReponse.Headers.Date.ToString() +
                     " Method: " + httpReponse.RequestMessage.Method.ToString() + ", RequestRequestUri: " + httpReponse.RequestMessage.RequestUri.ToString() +
-                    "\r\n" + httpReponse.ToString() + "\r\n";
+                    "\r\n" + httpReponse.ToString() + ".\r\n";
             }
 
             return result;
@@ -124,7 +124,7 @@ namespace AlfaSoft_Entrevista
         protected static DateTime GetLogFileDate()
         {
             var enviroment = Environment.CurrentDirectory;
-            string directory = Directory.GetParent(enviroment).Parent.FullName + LogFileName;
+            string directory = enviroment + LogFileName;
             DateTime lastWriteTime = new DateTime();
             try
             {
