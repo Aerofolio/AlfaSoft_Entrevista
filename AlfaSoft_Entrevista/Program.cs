@@ -113,7 +113,9 @@ namespace AlfaSoft_Entrevista
             string result = string.Empty;
             foreach (var httpReponse in httpResponses)
             {
-                result += httpReponse.ToString() + "\r\n";
+                result += httpReponse.Headers.Date.ToString() +
+                    " Method: " + httpReponse.RequestMessage.Method.ToString() + ", RequestRequestUri: " + httpReponse.RequestMessage.RequestUri.ToString() +
+                    "\r\n" + httpReponse.ToString() + "\r\n";
             }
 
             return result;

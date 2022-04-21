@@ -1,133 +1,138 @@
+21/04/2022 16:51:13 +00:00 Method: GET, RequestRequestUri: https://api.bitbucket.org/2.0/users/testUser0
 StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 10453f5aee58dbb0
+  X-B3-TraceId: 3fc550e7115e78f5
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.018992
+  X-Usage-User-Time: 0.023486
   X-Usage-System-Time: 0.000000
-  X-Served-By: a666aceced6b
+  X-Served-By: 34f28fcb06ba
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0338449478149
+  X-Render-Time: 0.0521268844604
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 2244
+  X-Request-Count: 2683
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 15:42:38 GMT
+  Date: Thu, 21 Apr 2022 16:51:13 GMT
   ETag: "0d95e90eb1a95d55cd71fb277031ceb1"
   Server: nginx
   Content-Length: 52
   Content-Type: application/json; charset=utf-8
 }
+21/04/2022 16:51:17 +00:00 Method: GET, RequestRequestUri: https://api.bitbucket.org/2.0/users/testUser1
 StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 99f94716557330d1
+  X-B3-TraceId: e94688b88b9e072c
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.016052
-  X-Usage-System-Time: 0.001693
-  X-Served-By: a666aceced6b
+  X-Usage-User-Time: 0.016737
+  X-Usage-System-Time: 0.000299
+  X-Served-By: 663379c95c93
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0236699581146
+  X-Render-Time: 0.0191881656647
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 1416
+  X-Request-Count: 3683
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 15:42:42 GMT
+  Date: Thu, 21 Apr 2022 16:51:17 GMT
   ETag: "6ba641acc91b9f9b030b775d41f2dfc7"
   Server: nginx
   Content-Length: 52
   Content-Type: application/json; charset=utf-8
 }
+21/04/2022 16:51:22 +00:00 Method: GET, RequestRequestUri: https://api.bitbucket.org/2.0/users/testUser2
 StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 52e76ef3e7d68e55
+  X-B3-TraceId: b3840475f22e0437
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.021380
-  X-Usage-System-Time: 0.001274
-  X-Served-By: dc50836e3907
+  X-Usage-User-Time: 0.016033
+  X-Usage-System-Time: 0.000972
+  X-Served-By: 663379c95c93
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0236828327179
+  X-Render-Time: 0.0195679664612
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 3444
+  X-Request-Count: 3785
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 15:42:47 GMT
+  Date: Thu, 21 Apr 2022 16:51:22 GMT
   ETag: "e95ea9664691706d96f97eb4dd2d2050"
   Server: nginx
   Content-Length: 52
   Content-Type: application/json; charset=utf-8
 }
+21/04/2022 16:51:27 +00:00 Method: GET, RequestRequestUri: https://api.bitbucket.org/2.0/users/testUser3
 StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 65a3d98a2dad58e4
+  X-B3-TraceId: fdf4a387cd5d7670
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.029683
-  X-Usage-System-Time: 0.000000
-  X-Served-By: 12f69f4eda61
+  X-Usage-User-Time: 0.018044
+  X-Usage-System-Time: 0.003432
+  X-Served-By: c54075af0872
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0242309570312
+  X-Render-Time: 0.0307600498199
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 1201
+  X-Request-Count: 374
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 15:42:52 GMT
+  Date: Thu, 21 Apr 2022 16:51:27 GMT
   ETag: "9c22441e22501666851be2ddb3022513"
   Server: nginx
   Content-Length: 52
   Content-Type: application/json; charset=utf-8
 }
+21/04/2022 16:51:32 +00:00 Method: GET, RequestRequestUri: https://api.bitbucket.org/2.0/users/testUser4
 StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 77b22ba6add25426
+  X-B3-TraceId: c1064db45298b282
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.021987
-  X-Usage-System-Time: 0.000000
-  X-Served-By: 663379c95c93
+  X-Usage-User-Time: 0.017343
+  X-Usage-System-Time: 0.002538
+  X-Served-By: 3c06f1d7ebac
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0242488384247
+  X-Render-Time: 0.0376868247986
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 420
+  X-Request-Count: 1291
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 15:42:57 GMT
+  Date: Thu, 21 Apr 2022 16:51:32 GMT
   ETag: "58f42e610963b0d95fa6a0c102573783"
   Server: nginx
   Content-Length: 52
