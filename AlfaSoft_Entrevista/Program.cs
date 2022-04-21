@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AlfaSoft_Entrevista
 {
@@ -9,6 +12,7 @@ namespace AlfaSoft_Entrevista
         static void Main(string[] args)
         {
             List<string> users = GetFileAndUsers();
+            var response = GetUsersFromAPI(users);
             Console.ReadLine();
         }
 
@@ -47,6 +51,26 @@ namespace AlfaSoft_Entrevista
         {
             string filePath = GetFilePath();
             return GetUsers(filePath);
+        }
+        protected static List<HttpResponseMessage> GetUsersFromAPI(List<string> users)
+        {
+            HttpClient client = new HttpClient();
+            List<HttpResponseMessage> responses = new List<HttpResponseMessage>();
+            foreach (var user in users)
+            {
+                var response = GetUserFromAPI(user, client);
+                Thread.Sleep(5000);
+                response.Wait();
+                responses.Add(response.Result);
+            }
+
+            return responses;
+        }
+
+        protected static async Task<HttpResponseMessage> GetUserFromAPI(string user, HttpClient client)
+        {
+            return await client.GetAsync("https://api.bitbucket.org/2.0/users/" + user);
+
         }
     }
 }
