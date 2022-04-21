@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,6 +14,8 @@ namespace AlfaSoft_Entrevista
         {
             List<string> users = GetFileAndUsers();
             var response = GetUsersFromAPI(users);
+            CreateFileWithResults(response);
+
             Console.ReadLine();
         }
 
@@ -71,6 +74,38 @@ namespace AlfaSoft_Entrevista
         {
             return await client.GetAsync("https://api.bitbucket.org/2.0/users/" + user);
 
+        }
+
+        protected static void CreateFileWithResults(List<HttpResponseMessage> httpResponses)
+        {
+            var fileName = "\\Log.txt";
+            var enviroment = Environment.CurrentDirectory;
+            string directory = Directory.GetParent(enviroment).Parent.FullName + fileName;
+            var infoString = HttpResponsesToString(httpResponses);
+
+            try
+            {
+                using (FileStream fs = File.Create(directory))
+                {
+                    byte[] info = new UTF8Encoding(true).GetBytes(infoString);
+                    fs.Write(info, 0, info.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        protected static string HttpResponsesToString(List<HttpResponseMessage> httpResponses)
+        {
+            string result = string.Empty;
+            foreach (var httpReponse in httpResponses)
+            {
+                result += httpReponse.ToString() + "\r\n";
+            }
+
+            return result;
         }
     }
 }
