@@ -2,24 +2,24 @@ StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Ht
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: dc7a79bb8e1be676
+  X-B3-TraceId: 3eff818c28488f27
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.013573
-  X-Usage-System-Time: 0.007456
-  X-Served-By: 3c06f1d7ebac
+  X-Usage-User-Time: 0.017226
+  X-Usage-System-Time: 0.001273
+  X-Served-By: 16fe02cb0452
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0338900089264
+  X-Render-Time: 0.0220680236816
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 411
+  X-Request-Count: 823
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:23 GMT
+  Date: Thu, 21 Apr 2022 15:15:30 GMT
   ETag: "0d95e90eb1a95d55cd71fb277031ceb1"
   Server: nginx
   Content-Length: 52
@@ -29,24 +29,24 @@ StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Ht
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 15d01d0048797a4e
+  X-B3-TraceId: b3ea39c346637529
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.014507
-  X-Usage-System-Time: 0.004630
+  X-Usage-User-Time: 0.016455
+  X-Usage-System-Time: 0.003120
   X-Served-By: 79b2b3b76e91
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0198631286621
+  X-Render-Time: 0.0219221115112
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 1233
+  X-Request-Count: 691
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:27 GMT
+  Date: Thu, 21 Apr 2022 15:15:35 GMT
   ETag: "6ba641acc91b9f9b030b775d41f2dfc7"
   Server: nginx
   Content-Length: 52
@@ -56,24 +56,24 @@ StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Ht
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 21f68b476fbe57de
+  X-B3-TraceId: 88f78e22fb0a256f
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.016762
-  X-Usage-System-Time: 0.000165
-  X-Served-By: 9939a9468bc7
+  X-Usage-User-Time: 0.019501
+  X-Usage-System-Time: 0.000000
+  X-Served-By: 1f4b3cd6b3d1
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0175330638885
+  X-Render-Time: 0.0217659473419
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 1492
+  X-Request-Count: 3825
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:32 GMT
+  Date: Thu, 21 Apr 2022 15:15:40 GMT
   ETag: "e95ea9664691706d96f97eb4dd2d2050"
   Server: nginx
   Content-Length: 52
@@ -83,24 +83,24 @@ StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Ht
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: afe7640f1ccb3161
+  X-B3-TraceId: 54091bbf6e55edf0
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.012584
-  X-Usage-System-Time: 0.005653
-  X-Served-By: d88057235677
+  X-Usage-User-Time: 0.014559
+  X-Usage-System-Time: 0.004832
+  X-Served-By: 79b2b3b76e91
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0204250812531
+  X-Render-Time: 0.0320620536804
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 3515
+  X-Request-Count: 3711
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:37 GMT
+  Date: Thu, 21 Apr 2022 15:15:45 GMT
   ETag: "9c22441e22501666851be2ddb3022513"
   Server: nginx
   Content-Length: 52
@@ -110,52 +110,25 @@ StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Ht
 {
   Vary: Authorization
   Vary: Origin
-  X-B3-TraceId: 4628e5b9447c85e4
+  X-B3-TraceId: c8cafd69a0e62dfd
   X-Usage-Output-Ops: 0
   X-Dc-Location: Micros
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.034058
-  X-Usage-System-Time: 0.003708
-  X-Served-By: 34f28fcb06ba
-  X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
-  X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0531768798828
-  Connection: keep-alive
-  X-Usage-Input-Ops: 0
-  X-Version: 7879fb4da38f
-  X-Request-Count: 2
-  X-Frame-Options: SAMEORIGIN
-  X-Cache-Info: caching
-  Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:42 GMT
-  ETag: "58f42e610963b0d95fa6a0c102573783"
-  Server: nginx
-  Content-Length: 52
-  Content-Type: application/json; charset=utf-8
-}
-StatusCode: 404, ReasonPhrase: 'Not Found', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
-{
-  Vary: Authorization
-  Vary: Origin
-  X-B3-TraceId: 4251f76f5b932ca5
-  X-Usage-Output-Ops: 0
-  X-Dc-Location: Micros
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Usage-User-Time: 0.017466
+  X-Usage-User-Time: 0.022092
   X-Usage-System-Time: 0.000000
-  X-Served-By: b387d2ed58d6
+  X-Served-By: 1f4b3cd6b3d1
   X-View-Name: bitbucket.apps.bb.api.v20.handlers.UserHandler
   X-Static-Version: 7879fb4da38f
-  X-Render-Time: 0.0185980796814
+  X-Render-Time: 0.026270866394
   Connection: keep-alive
   X-Usage-Input-Ops: 0
   X-Version: 7879fb4da38f
-  X-Request-Count: 793
+  X-Request-Count: 1900
   X-Frame-Options: SAMEORIGIN
   X-Cache-Info: caching
   Cache-Control: max-age=900
-  Date: Thu, 21 Apr 2022 14:58:47 GMT
-  ETag: "fa3cb8b526a1eb41dcb211d3b5d9b133"
+  Date: Thu, 21 Apr 2022 15:15:50 GMT
+  ETag: "58f42e610963b0d95fa6a0c102573783"
   Server: nginx
   Content-Length: 52
   Content-Type: application/json; charset=utf-8

@@ -16,13 +16,14 @@ namespace AlfaSoft_Entrevista
             var response = GetUsersFromAPI(users);
             CreateFileWithResults(response);
 
-            Console.ReadLine();
+            Thread.Sleep(5000);
         }
 
         protected static string GetFilePath()
         {
             Console.WriteLine("Insert the full path to a file containing users:");
             string filePath = Console.ReadLine();
+            Console.Clear();
 
             return filePath;
         }
@@ -45,7 +46,6 @@ namespace AlfaSoft_Entrevista
             }
             catch (IOException ex)
             {
-                Console.WriteLine("The file could not be read:");
                 Console.WriteLine(ex.Message);
             }
             return users;
@@ -65,6 +65,7 @@ namespace AlfaSoft_Entrevista
                 Thread.Sleep(5000);
                 response.Wait();
                 responses.Add(response.Result);
+                Console.WriteLine($"Response: {response.Result.StatusCode}\r\n");
             }
 
             return responses;
@@ -72,8 +73,9 @@ namespace AlfaSoft_Entrevista
 
         protected static async Task<HttpResponseMessage> GetUserFromAPI(string user, HttpClient client)
         {
-            return await client.GetAsync("https://api.bitbucket.org/2.0/users/" + user);
-
+            var connectionString = "https://api.bitbucket.org/2.0/users/" + user;
+            Console.WriteLine($"User: {user} is being retrived\r\nURI: {connectionString}");
+            return await client.GetAsync(connectionString);
         }
 
         protected static void CreateFileWithResults(List<HttpResponseMessage> httpResponses)
