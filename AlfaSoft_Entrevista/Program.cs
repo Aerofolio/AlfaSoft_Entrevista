@@ -92,6 +92,7 @@ namespace AlfaSoft_Entrevista
                     byte[] info = new UTF8Encoding(true).GetBytes(infoString);
                     fs.Write(info, 0, info.Length);
                 }
+                Console.WriteLine($"Log file created at: {directory}");
             }
             catch (Exception ex)
             {
