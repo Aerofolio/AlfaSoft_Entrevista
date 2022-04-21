@@ -12,9 +12,13 @@ namespace AlfaSoft_Entrevista
     {
         static void Main(string[] args)
         {
-            List<string> users = GetFileAndUsers();
-            var response = GetUsersFromAPI(users);
-            CreateFileWithResults(response);
+            if (CheckLastRequestTime())
+            {
+                List<string> users = GetFileAndUsers();
+                var response = GetUsersFromAPI(users);
+                CreateFileWithResults(response);
+                GetLogFileDate();
+            }            
 
             Thread.Sleep(5000);
         }
@@ -109,6 +113,39 @@ namespace AlfaSoft_Entrevista
             }
 
             return result;
+        }
+
+        protected static DateTime GetLogFileDate()
+        {
+            var fileName = "\\Log.txt";
+            var enviroment = Environment.CurrentDirectory;
+            string directory = Directory.GetParent(enviroment).Parent.FullName + fileName;
+            DateTime lastWriteTime = new DateTime();
+            try
+            {
+                lastWriteTime = File.GetLastWriteTime(directory);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return lastWriteTime;
+        }
+
+        protected static bool CheckLastRequestTime()
+        {
+            var lastRequestTime = GetLogFileDate();
+            var difference = DateTime.Now - lastRequestTime;
+            if (difference.TotalSeconds < 60)
+            {
+                Console.WriteLine("One request was made less than 60 seconds ago\r\nClosing application");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
