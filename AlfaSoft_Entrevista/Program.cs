@@ -10,25 +10,28 @@ namespace AlfaSoft_Entrevista
 {
     internal class Program
     {
-        protected static string LogFileName = "\\Log.txt";
-        protected static string ConnectionStringAPI = "https://api.bitbucket.org/2.0/users/";
-        protected static int MiliSecondsBetweenRequests = 5000;
-        protected static int MiliSecondsBeforeColse = 5000;
-        protected static int SecondsBetweenRequests = 60;
-        static void Main(string[] args)
+        private static readonly string LogFileName = "\\Log.txt";
+        private static readonly string ConnectionStringAPI = "https://api.bitbucket.org/2.0/users/";
+        private static readonly int MiliSecondsBetweenRequests = 5000;
+        private static readonly int MiliSecondsBeforeColse = 5000;
+        private static readonly int SecondsBetweenRequests = 60;
+        public static void Main(string[] args)
         {
             if (CheckLastRequestTime())
             {
                 List<string> users = GetFileAndUsers();
                 var response = GetUsersFromAPI(users);
                 CreateFileWithResults(response);
-                GetLogFileDate();
-            }            
+            }
+            else
+            {
+                Console.WriteLine("One request was made less than 60 seconds ago.\r\nClosing application");
+            }
 
             Thread.Sleep(MiliSecondsBeforeColse);
         }
 
-        protected static string GetFilePath()
+        private static string GetFilePath()
         {
             Console.WriteLine("Insert the full path to a file containing users:");
             string filePath = Console.ReadLine();
@@ -37,7 +40,7 @@ namespace AlfaSoft_Entrevista
             return filePath;
         }
 
-        protected static List<string> GetUsers(string filePath)
+        private static List<string> GetUsers(string filePath)
         {
             List<string> users = new List<string>();
             try
@@ -45,8 +48,7 @@ namespace AlfaSoft_Entrevista
                 using (var sr = new StreamReader(filePath))
                 {
                     var fileData = sr.ReadToEnd();
-                    fileData = fileData.Replace("\r\n", "\n");
-                    var fileLines = fileData.Split('\n');
+                    var fileLines = fileData.Replace("\r\n", "\n").Split('\n');
                     foreach (var line in fileLines)
                     {
                         users.Add(line);
@@ -59,12 +61,12 @@ namespace AlfaSoft_Entrevista
             }
             return users;
         }
-        protected static List<string> GetFileAndUsers()
+        private static List<string> GetFileAndUsers()
         {
             string filePath = GetFilePath();
             return GetUsers(filePath);
         }
-        protected static List<HttpResponseMessage> GetUsersFromAPI(List<string> users)
+        private static List<HttpResponseMessage> GetUsersFromAPI(List<string> users)
         {
             HttpClient client = new HttpClient();
             List<HttpResponseMessage> responses = new List<HttpResponseMessage>();
@@ -80,14 +82,14 @@ namespace AlfaSoft_Entrevista
             return responses;
         }
 
-        protected static async Task<HttpResponseMessage> GetUserFromAPI(string user, HttpClient client)
+        private static async Task<HttpResponseMessage> GetUserFromAPI(string user, HttpClient client)
         {
             var connectionString = ConnectionStringAPI + user;
             Console.WriteLine($"User: '{user}' is being retrived.\r\nURL: {connectionString}");
             return await client.GetAsync(connectionString);
         }
 
-        protected static void CreateFileWithResults(List<HttpResponseMessage> httpResponses)
+        private static void CreateFileWithResults(List<HttpResponseMessage> httpResponses)
         {
             var enviroment = Environment.CurrentDirectory;
             string directory = enviroment + LogFileName;
@@ -108,7 +110,7 @@ namespace AlfaSoft_Entrevista
             }
         }
 
-        protected static string HttpResponsesToString(List<HttpResponseMessage> httpResponses)
+        private static string HttpResponsesToString(List<HttpResponseMessage> httpResponses)
         {
             string result = string.Empty;
             foreach (var httpReponse in httpResponses)
@@ -121,7 +123,7 @@ namespace AlfaSoft_Entrevista
             return result;
         }
 
-        protected static DateTime GetLogFileDate()
+        private static DateTime GetLogFileDate()
         {
             var enviroment = Environment.CurrentDirectory;
             string directory = enviroment + LogFileName;
@@ -138,19 +140,11 @@ namespace AlfaSoft_Entrevista
             return lastWriteTime;
         }
 
-        protected static bool CheckLastRequestTime()
+        private static bool CheckLastRequestTime()
         {
             var lastRequestTime = GetLogFileDate();
             var difference = DateTime.Now - lastRequestTime;
-            if (difference.TotalSeconds < SecondsBetweenRequests)
-            {
-                Console.WriteLine("One request was made less than 60 seconds ago.\r\nClosing application");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return difference.TotalSeconds >= SecondsBetweenRequests;
         }
     }
 }
